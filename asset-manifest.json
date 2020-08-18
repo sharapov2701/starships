@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/starships/static/css/main.6348cc70.chunk.css",
-    "main.js": "/starships/static/js/main.62b7f0af.chunk.js",
-    "main.js.map": "/starships/static/js/main.62b7f0af.chunk.js.map",
+    "main.css": "/starships/static/css/main.614f225d.chunk.css",
+    "main.js": "/starships/static/js/main.518cc38f.chunk.js",
+    "main.js.map": "/starships/static/js/main.518cc38f.chunk.js.map",
     "runtime-main.js": "/starships/static/js/runtime-main.4eb0037b.js",
     "runtime-main.js.map": "/starships/static/js/runtime-main.4eb0037b.js.map",
-    "static/js/2.894d8ff8.chunk.js": "/starships/static/js/2.894d8ff8.chunk.js",
-    "static/js/2.894d8ff8.chunk.js.map": "/starships/static/js/2.894d8ff8.chunk.js.map",
+    "static/js/2.4e69a5f0.chunk.js": "/starships/static/js/2.4e69a5f0.chunk.js",
+    "static/js/2.4e69a5f0.chunk.js.map": "/starships/static/js/2.4e69a5f0.chunk.js.map",
     "index.html": "/starships/index.html",
-    "precache-manifest.9911d8ddcb79d7584717c0e6b0b4195c.js": "/starships/precache-manifest.9911d8ddcb79d7584717c0e6b0b4195c.js",
+    "precache-manifest.4cff53f40776c3beb223391b89b2c62b.js": "/starships/precache-manifest.4cff53f40776c3beb223391b89b2c62b.js",
     "service-worker.js": "/starships/service-worker.js",
-    "static/css/main.6348cc70.chunk.css.map": "/starships/static/css/main.6348cc70.chunk.css.map",
-    "static/js/2.894d8ff8.chunk.js.LICENSE.txt": "/starships/static/js/2.894d8ff8.chunk.js.LICENSE.txt"
+    "static/css/main.614f225d.chunk.css.map": "/starships/static/css/main.614f225d.chunk.css.map",
+    "static/js/2.4e69a5f0.chunk.js.LICENSE.txt": "/starships/static/js/2.4e69a5f0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4eb0037b.js",
-    "static/js/2.894d8ff8.chunk.js",
-    "static/css/main.6348cc70.chunk.css",
-    "static/js/main.62b7f0af.chunk.js"
+    "static/js/2.4e69a5f0.chunk.js",
+    "static/css/main.614f225d.chunk.css",
+    "static/js/main.518cc38f.chunk.js"
   ]
 }
