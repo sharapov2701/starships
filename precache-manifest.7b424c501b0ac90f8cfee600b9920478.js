@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "80ff22b6780a50d79c6a166aa4b1fbf5",
+    "revision": "78a428dfb00a0dcc3ef468cff68d0980",
     "url": "/starships/index.html"
   },
   {
-    "revision": "546ab96e733cefc31638",
+    "revision": "ff22f21228f094b78b07",
     "url": "/starships/static/css/main.614f225d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/starships/static/js/2.b3c094f6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "546ab96e733cefc31638",
-    "url": "/starships/static/js/main.70aa99d0.chunk.js"
+    "revision": "ff22f21228f094b78b07",
+    "url": "/starships/static/js/main.e7532591.chunk.js"
   },
   {
     "revision": "b98beb907e10a25fb4c4",
