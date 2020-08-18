@@ -1,7 +1,8 @@
-import { GET_STARSHIPS, TOGGLE_COMPARE } from './types'
+import { GET_STARSHIPS, TOGGLE_COMPARE, ERROR } from './types'
 
 const initialState = {
-    starships: []
+    starships: [],
+    error: false
 }
 
 const getColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16)
@@ -25,6 +26,9 @@ export const rootReducer = (state = initialState, action) => {
                 return starship
             })
             return { ...state, starships: comparedShips }
+
+        case ERROR:
+            return { ...state, error: true }
 
         default:
             return state
