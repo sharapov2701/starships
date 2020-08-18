@@ -13,14 +13,14 @@ export const getStarships = () => {
                 data.results.map(async starship => {
                     starship.films = await Promise.all(
                         starship.films.map(f =>
-                            fetch(f)
+                            fetch(f.replace(/http:/, 'https:'))
                                 .then(d => d.json())
                                 .then(d => d.title)
                         )
                     )
                     starship.pilots = await Promise.all(
                         starship.pilots.map(f =>
-                            fetch(f)
+                            fetch(f.replace(/http:/, 'https:'))
                                 .then(d => d.json())
                                 .then(d => d.name)
                         )
