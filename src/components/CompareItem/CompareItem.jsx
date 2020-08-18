@@ -1,6 +1,5 @@
 import React from 'react'
 import style from './CompareItem.module.css'
-import Titles from '../Titles/Titles'
 import Fields from '../Fields/Fields'
 
 const CompareItem = props => {
@@ -24,8 +23,7 @@ const CompareItem = props => {
 
     return (
         <div className={style.item}>
-            {props.fieldsTitles && <Titles titles={Object.keys(starship)} />}
-            <Fields fields={Object.values(starship)} />
+            <Fields starship={starship} fieldsTitles={props.fieldsTitles} />
         </div>
     )
 }

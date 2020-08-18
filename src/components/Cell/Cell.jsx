@@ -1,10 +1,14 @@
 import React from 'react'
 import style from './Cell.module.css'
 
-const Cell = ({ row, content }) => {
+const Cell = props => {
     return (
-        <div className={`cell ${style.cell}`} data-row={row}>
-            {content}
+        <div
+            className={`cell ${style.cell}`}
+            data-row={props.row}
+            style={props.style}
+        >
+            {props.content}
         </div>
     )
 }
