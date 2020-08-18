@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2;
+}
+
+.title {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s all ease-out;
+}
+
+.title:hover {
+    color: #ffc426;
+}

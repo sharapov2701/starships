@@ -1,0 +1,50 @@
+.item {
+    width: calc(50% - 20px);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+@media (max-width: 425px) {
+    .item {
+        width: 100%;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+    text-align: center;
+}
+
+.manufacturer,
+.model,
+.cost {
+    margin-top: 5px;
+}
+
+.manufacturer {
+    color: grey;
+}
+
+.model {
+    font-weight: bold;
+}
+
+.cost {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
