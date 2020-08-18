@@ -10,7 +10,7 @@ const Fields = ({ starship, fieldsTitles }) => {
             field = field.length ? field.join(', ') : '-'
         }
         return (
-            <div className={title === 'name' ? 'compare-header' : ''}>
+            <div className={title === 'name' ? 'compare-header' : ''} key={row}>
                 <Cell
                     content={fieldsTitles ? formatTitle(title) : ''}
                     style={{

@@ -6,9 +6,7 @@ import Button from '../Button/Button'
 
 const CatalogItem = ({ starship }) => {
     const dispatch = useDispatch()
-    const text = starship.isCompared
-        ? 'Удалить из сранения'
-        : 'Добавить к сравнению'
+    const text = starship.isCompared ? 'Remove from compare' : 'Add to compare'
 
     return (
         <div className={style.item}>

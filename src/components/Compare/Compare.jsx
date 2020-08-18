@@ -6,9 +6,18 @@ import style from './Compare.module.css'
 const Compare = () => {
     const starships = useSelector(state => state.starships)
     const comparedShips = starships.filter(s => s.isCompared)
-    const shipItems = comparedShips.map((s, index) => (
-        <CompareItem starship={s} fieldsTitles={index === 0 ? true : false} />
-    ))
+    const shipItems =
+        comparedShips.length > 1 ? (
+            comparedShips.map((s, index) => (
+                <CompareItem
+                    starship={s}
+                    fieldsTitles={index === 0 ? true : false}
+                    key={index}
+                />
+            ))
+        ) : (
+            <h1>Choose at least 2 shoops to compare</h1>
+        )
 
     useEffect(resize)
 
