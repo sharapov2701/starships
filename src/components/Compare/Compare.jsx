@@ -16,7 +16,7 @@ const Compare = () => {
                 />
             ))
         ) : (
-            <h1>Choose at least 2 shoops to compare</h1>
+            <h1>Choose at least 2 starsheeps to compare</h1>
         )
 
     useEffect(resize)
