@@ -10,7 +10,7 @@ import { Route } from 'react-router-dom'
 function App() {
     const dispatch = useDispatch()
     const starships = useSelector(state => state.starships)
-    if (!starships.length) {
+    if (starships === null) {
         dispatch(getStarships())
     }
 

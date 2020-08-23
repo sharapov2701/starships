@@ -1,7 +1,7 @@
 import { GET_STARSHIPS, TOGGLE_COMPARE, ERROR } from './types'
 
 const initialState = {
-    starships: [],
+    starships: null,
     error: false
 }
 

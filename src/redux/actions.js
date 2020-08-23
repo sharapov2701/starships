@@ -2,6 +2,8 @@ import { GET_STARSHIPS, TOGGLE_COMPARE, ERROR } from './types'
 
 export const getStarships = () => {
     return async dispatch => {
+        dispatch({ type: GET_STARSHIPS, payload: [] })
+
         const data = await fetch('https://swapi.dev/api/starships/')
             .then(d => d.json())
             .catch(() => {
