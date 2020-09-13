@@ -4,9 +4,8 @@ import style from './Cell.module.css'
 const Cell = props => {
     return (
         <div
-            className={`cell ${style.cell}`}
+            className={`cell ${style.cell} ${props.isTitle ? style.title : ''}`}
             data-row={props.row}
-            style={props.style}
         >
             {props.content}
         </div>

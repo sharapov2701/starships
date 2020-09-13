@@ -1,3 +1,4 @@
 export const GET_STARSHIPS = 'GET_STARSHIPS'
+export const IS_LOADING = 'IS_LOADING'
+export const HAS_ERRORED = 'HAS_ERRORED'
 export const TOGGLE_COMPARE = 'TOGGLE_COMPARE'
-export const ERROR = 'ERROR'

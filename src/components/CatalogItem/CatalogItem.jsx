@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { toggleCompare } from '../../redux/actions'
-import style from './CatalogItem.module.css'
 import Button from '../Button/Button'
+import style from './CatalogItem.module.css'
 
 const CatalogItem = ({ starship }) => {
     const dispatch = useDispatch()

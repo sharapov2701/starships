@@ -23,7 +23,7 @@ const CompareItem = props => {
 
     return (
         <div className={style.item}>
-            <Fields starship={starship} fieldsTitles={props.fieldsTitles} />
+            <Fields starship={starship} showTitle={props.showTitle} />
         </div>
     )
 }

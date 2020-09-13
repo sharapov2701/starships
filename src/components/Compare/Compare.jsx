@@ -1,27 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CompareItem from '../CompareItem/CompareItem'
 import style from './Compare.module.css'
 
 const Compare = () => {
-    const starships = useSelector(state => state.starships)
-    const comparedShips = starships.filter(s => s.isCompared)
-    const shipItems =
-        comparedShips.length > 1 ? (
-            comparedShips.map((s, index) => (
-                <CompareItem
-                    starship={s}
-                    fieldsTitles={index === 0 ? true : false}
-                    key={index}
-                />
-            ))
-        ) : (
-            <h1>Choose at least 2 starsheeps to compare</h1>
-        )
+    const ships = useSelector(state => state.starships)
+    const comparedShips = ships.filter(s => s.isCompared)
+    const shipItems = ships.map((s, index) => (
+        <CompareItem
+            starship={s}
+            showTitle={index === 0 ? true : false}
+            key={index}
+        />
+    ))
 
-    useEffect(resize)
+    useEffect(resize, [])
 
-    return <div className={style.items}>{shipItems}</div>
+    return (
+        <div className={style.items}>
+            {comparedShips.length > 1 ? (
+                shipItems
+            ) : (
+                <h1>Choose at least 2 starsheeps to compare</h1>
+            )}
+        </div>
+    )
 }
 
 const resize = () => {

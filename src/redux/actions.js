@@ -1,39 +1,18 @@
-import { GET_STARSHIPS, TOGGLE_COMPARE, ERROR } from './types'
+import { GET_STARSHIPS, IS_LOADING, HAS_ERRORED, TOGGLE_COMPARE } from './types'
 
 export const getStarships = () => {
-    return async dispatch => {
-        dispatch({ type: GET_STARSHIPS, payload: [] })
-
-        const data = await fetch('https://swapi.dev/api/starships/')
+    return dispatch => {
+        dispatch({ type: IS_LOADING, payload: true })
+        fetch('https://swapi.dev/api/starships/')
             .then(d => d.json())
-            .catch(() => {
-                dispatch({ type: ERROR })
-            })
-
-        if (data) {
-            const starships = await Promise.all(
-                data.results.map(async starship => {
-                    starship.films = await Promise.all(
-                        starship.films.map(f =>
-                            fetch(f.replace(/http:/, 'https:'))
-                                .then(d => d.json())
-                                .then(d => d.title)
-                        )
-                    )
-                    starship.pilots = await Promise.all(
-                        starship.pilots.map(f =>
-                            fetch(f.replace(/http:/, 'https:'))
-                                .then(d => d.json())
-                                .then(d => d.name)
-                        )
-                    )
-                    return starship
-                })
-            )
-
-            dispatch({ type: GET_STARSHIPS, payload: starships })
-        }
+            .then(d => dispatch({ type: GET_STARSHIPS, payload: d.results }))
+            .catch(() => dispatch({ type: HAS_ERRORED }))
+            .finally(() => dispatch({ type: IS_LOADING, payload: false }))
     }
 }
+
+export const isLoading = bool => ({ type: IS_LOADING, payload: bool })
+
+export const hasErrored = bool => ({ type: HAS_ERRORED, payload: bool })
 
 export const toggleCompare = index => ({ type: TOGGLE_COMPARE, payload: index })

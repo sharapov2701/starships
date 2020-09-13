@@ -1,18 +1,17 @@
-import React from 'react'
-import Catalog from './components/Catalog/Catalog'
-import Compare from './components/Compare/Compare'
-import style from './App.module.css'
-import { connect, useDispatch, useSelector } from 'react-redux'
-import { getStarships } from './redux/actions'
-import Header from './components/Header/Header'
+import React, { useEffect } from 'react'
 import { Route } from 'react-router-dom'
+import { connect, useDispatch } from 'react-redux'
+import { getStarships } from '../../redux/actions'
+import Catalog from '../Catalog/Catalog'
+import Compare from '../Compare/Compare'
+import Header from '../Header/Header'
+import style from './App.module.css'
 
 function App() {
     const dispatch = useDispatch()
-    const starships = useSelector(state => state.starships)
-    if (starships === null) {
+    useEffect(() => {
         dispatch(getStarships())
-    }
+    }, [dispatch])
 
     return (
         <div className={style.App}>

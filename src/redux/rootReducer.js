@@ -1,11 +1,10 @@
-import { GET_STARSHIPS, TOGGLE_COMPARE, ERROR } from './types'
+import { GET_STARSHIPS, IS_LOADING, HAS_ERRORED, TOGGLE_COMPARE } from './types'
 
 const initialState = {
-    starships: null,
-    error: false
+    starships: [],
+    hasErrored: false,
+    isLoading: true
 }
-
-const getColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16)
 
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -13,10 +12,16 @@ export const rootReducer = (state = initialState, action) => {
             const starships = action.payload.map((starship, id) => ({
                 ...starship,
                 id,
-                color: getColor(),
+                color: '#' + Math.ceil(Math.random() * 16777215).toString(16),
                 isCompared: false
             }))
             return { ...state, starships }
+
+        case IS_LOADING:
+            return { ...state, isLoading: action.payload }
+
+        case HAS_ERRORED:
+            return { ...state, hasErrored: action.payload }
 
         case TOGGLE_COMPARE:
             const comparedShips = state.starships.map(starship => {
@@ -26,9 +31,6 @@ export const rootReducer = (state = initialState, action) => {
                 return starship
             })
             return { ...state, starships: comparedShips }
-
-        case ERROR:
-            return { ...state, error: true }
 
         default:
             return state
