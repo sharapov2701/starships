@@ -6,7 +6,7 @@ import style from './Compare.module.css'
 const Compare = () => {
     const ships = useSelector(state => state.starships)
     const comparedShips = ships.filter(s => s.isCompared)
-    const shipItems = ships.map((s, index) => (
+    const shipItems = comparedShips.map((s, index) => (
         <CompareItem
             starship={s}
             showTitle={index === 0 ? true : false}
